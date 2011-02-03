@@ -62,6 +62,10 @@
     <xs:complexType mixed="true" />
   </xs:element>
 
+  <xs:element name="TestSuite">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
   <xs:element name="Statistics">
     <xs:complexType>
       <xs:sequence>
@@ -93,6 +97,7 @@
   <xs:element name="TestRun">
     <xs:complexType>
       <xs:sequence>
+        <xs:element ref="TestSuite" minOccurs="0" maxOccurs="1"/>
         <xs:element ref="FailedTests" minOccurs="0" maxOccurs="1"/>
         <xs:element ref="SuccessfulTests" minOccurs="0"  maxOccurs="1"/>
         <xs:element ref="Statistics" minOccurs="1" maxOccurs="1"/>
